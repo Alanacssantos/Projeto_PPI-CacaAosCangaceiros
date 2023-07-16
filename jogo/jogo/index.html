@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de atirar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo de atirar</h1>
+        <h5>Atire para ganhar pontos:</h5>
+        <h4>Tempo:</h4>
+        <h5 id="tempo">00</h5>
+        <div id="placar">
+            <div>
+                <h3>Erros</h3>
+                <span id="erros">0</span>
+            </div>
+            <div>
+                <h3>Acertos</h3>
+                <span id="acertos">0</span>
+            </div>
+            <div>
+                <h3>Tentativas</h3>
+                <span id="jogadas">0</span>
+            </div>
+        </div>
+    </header>
+    <div class="telaGame" id="telaGame">
+        <img width="40px" height="40px" id="mouse" src="images/mira.png">
+        <img id="alvo" width="90px" height="90px" src="images/sapo.png">
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

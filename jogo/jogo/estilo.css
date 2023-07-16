@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "fonteJogo";
+    src: url("fontes/pixelFont.ttf");
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1 {
+    font-family: fonteJogo;
+}
+
+#telaGame {
+    display: flex;
+    align-items: left;
+    margin: auto;
+    width: 750px;
+    height: 500px;
+    background-size: cover;
+    background-image: url(images/cenario.jpg);
+    cursor: none;
+}
+
+#placar {
+    display: flex;
+    justify-content: center;
+}
+
+#placar div {
+    margin: 1%;
+    padding: 10px;
+    display: flex;
+    width: 110px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(68, 68, 68);
+}
+
+#placar div h3 {
+    margin: 0px;
+    padding: 0%;
+    margin-right: 10px;
+}
+span {
+    padding-top: 3px;
+}
+
+#alvo {
+    top: 0%;
+    left: 0%;
+    position: relative;
+}
+
+#telaGameOver h1 {
+    font-size: 4em;
+}
+
+#mouse {
+    position: absolute;
+}

@@ -10,10 +10,18 @@ let tempo = 15;
 let estaClicado = false;
 let gamerOver = false;
 
+//Pegando o Height e Widht
+let alturaTela = document.getElementById("telaGame").clientHeight;
+let larguraTela = document.getElementById("telaGame").clientWidth;
+
+let alturaAlvo = document.getElementById("alvo").clientHeight;
+let larguraAlvo = document.getElementById("alvo").clientWidth;
+
+
 setInterval(()=>{
 
-    alvo.style.top = Math.floor(Math.random() * 410) + "px";
-    alvo.style.left = Math.floor(Math.random() * 660) + "px";
+    alvo.style.top = Math.floor(Math.random() * (alturaTela - alturaAlvo)) + "px";
+    alvo.style.left = Math.floor(Math.random() * (larguraTela - larguraAlvo)) + "px";
     alvo.style.display = "block";
     
     alvo.onclick = function() {

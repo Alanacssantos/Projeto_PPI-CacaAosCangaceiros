@@ -5,6 +5,8 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 h1 {
     font-family: fonteJogo;
@@ -14,11 +16,12 @@ h1 {
     display: flex;
     align-items: left;
     margin: auto;
-    width: 750px;
-    height: 500px;
+    width: 70vw;
+    height: 70vh;
     background-size: cover;
-    background-image: url(images/cenario.jpg);
+    background-image: url(images/CUTSCENES.png);
     cursor: none;
+    background-repeat: round;
 }
 
 #placar {

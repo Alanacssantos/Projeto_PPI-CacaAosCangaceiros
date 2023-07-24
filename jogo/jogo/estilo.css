@@ -15,14 +15,17 @@ h1 {
 
 #telaGame {
     display: flex;
-    align-items: left;
     margin: auto;
-    max-width: 80%;
-    max-height: 50%;
+    width: 80vw;
+    height: 50vh;
     background-size: cover;
     background-image: url(images/CUTSCENES.png);
-    cursor: none;
     background-repeat: round;
+    position: relative;
+}
+#telaGame:hover{
+    cursor:url(images/mira.png);
+    
 }
 
 #placar {
@@ -52,13 +55,9 @@ span {
 #alvo {
     top: 0%;
     left: 0%;
-    position: relative;
+    position: absolute;
 }
 
 #telaGameOver h1 {
     font-size: 4em;
-}
-
-#mouse {
-    position: absolute;
 }

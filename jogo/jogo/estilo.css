@@ -18,7 +18,7 @@ h1 {
     justify-content: center;
 }
 #canvas{
-    width: 50%;
+    width: 60%;
 }
 
 #telaGame {
@@ -61,8 +61,8 @@ span {
     top: 0%;
     left: 0%;
     position: absolute;
-    width: 13%;
-    height: 30%;
+    width: 12%;
+    height: 27%;
     /* Trabalhando com porcentagem para ficar responsivo*/
 }
 

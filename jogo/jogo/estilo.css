@@ -63,6 +63,7 @@ span {
     position: absolute;
     width: 13%;
     height: 30%;
+    /* Trabalhando com porcentagem para ficar responsivo*/
 }
 
 #telaGameOver h1 {

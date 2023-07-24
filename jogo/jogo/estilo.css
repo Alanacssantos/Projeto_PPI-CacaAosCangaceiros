@@ -16,7 +16,7 @@ h1 {
 #telaGame {
     display: flex;
     margin: auto;
-    width: 80vw;
+    width: 50vw;
     height: 50vh;
     background-size: cover;
     background-image: url(images/CUTSCENES.png);
@@ -24,8 +24,7 @@ h1 {
     position: relative;
 }
 #telaGame:hover{
-    cursor:url(images/mira.png), pointer;
-    
+    cursor: url(images/Ponteiro.cur), pointer;
 }
 
 #placar {

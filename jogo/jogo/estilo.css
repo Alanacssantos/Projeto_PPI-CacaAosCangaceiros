@@ -23,12 +23,11 @@ h1 {
 
 #telaGame {
     width: 100%;
-    padding-top: 56.25%; /* Ajusta a altura sendo 56.25% da largura*/
+    padding-top: 56.25%; /* Ajusta a o conteúdo sendo 56.25% da largura*/
     background-size: contain; /* Ajusta a imagem ao tamanho da div*/
     background-image: url(images/CUTSCENES.png);
     background-repeat: no-repeat;
     position: relative;
-    background-color: aqua;
 }
 #telaGame:hover{
     cursor: url(images/Ponteiro.cur), pointer;

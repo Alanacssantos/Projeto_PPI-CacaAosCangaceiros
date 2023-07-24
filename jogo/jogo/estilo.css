@@ -12,16 +12,23 @@
 h1 {
     font-family: fonteJogo;
 }
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#canvas{
+    width: 50%;
+}
 
 #telaGame {
-    display: flex;
-    margin: auto;
-    width: 50vw;
-    height: 50vh;
-    background-size: cover;
+    width: 100%;
+    padding-top: 56.25%; /* Ajusta a altura sendo 56.25% da largura*/
+    background-size: contain; /* Ajusta a imagem ao tamanho da div*/
     background-image: url(images/CUTSCENES.png);
-    background-repeat: round;
+    background-repeat: no-repeat;
     position: relative;
+    background-color: aqua;
 }
 #telaGame:hover{
     cursor: url(images/Ponteiro.cur), pointer;

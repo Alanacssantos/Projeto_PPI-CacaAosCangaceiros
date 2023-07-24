@@ -5,9 +5,9 @@ let placaErros = document.getElementById("erros");
 let placaJogadas = document.getElementById("jogadas");
 let temporizador = document.getElementById("tempo");
 let acertos = 0, erros = 0, jogadas = 0;
-let tempo = 15;
+let tempo = 30;
 let estaClicado = false;
-let gamerOver = false;
+let gameOver = false;
 
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;

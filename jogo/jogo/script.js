@@ -1,5 +1,4 @@
 let alvo = document.getElementById("alvo");
-let mouse = document.getElementById("mouse");
 let telaGame = document.getElementById("telaGame");
 let placaAcertos = document.getElementById("acertos");
 let placaErros = document.getElementById("erros");
@@ -57,8 +56,3 @@ if (tempo <= 0) {
     gameOver = true;
 }
 setInterval(() => {tempo -= 1; temporizador.innerHTML= tempo;}, 1000);
-
-telaGame.onmousemove = (event) => {
-    mouse.style.left = event.pageX + "px";
-    mouse.style.top = event.pageY + "px";
-}

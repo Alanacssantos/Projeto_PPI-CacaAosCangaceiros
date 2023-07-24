@@ -24,7 +24,7 @@ h1 {
     position: relative;
 }
 #telaGame:hover{
-    cursor:url(images/mira.png);
+    cursor:url(images/mira.png), pointer;
     
 }
 

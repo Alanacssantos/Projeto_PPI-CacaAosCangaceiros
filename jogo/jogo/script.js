@@ -39,7 +39,6 @@ telaGame.onclick = () => {
     if (estaClicado == false) {
         erros += 1;
         jogadas += 1;
-        tempo -= 3;
         placaErros.innerHTML = erros;
         placaJogadas.innerHTML = jogadas;
     }

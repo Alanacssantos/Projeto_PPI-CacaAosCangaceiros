@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "fonteTitulo";
+    src: url("../fontes/RetroGaming.TFF");
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#caixaTitulo{
+    text-align: left;
+    background-color: aliceblue;
+    padding: 1%;
+    display: flex;
+}
+#titulo{
+    margin-left: 2%;
+    margin-top: 3%;
+    font-size: 25px;
+}
+.conteudoNav{
+    margin-left: 10%;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+#logo{
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 0.1%;
+}
+#enredo{
+    text-align: center;
+    margin-top: 2%;
+}
+.articlePersonagens{
+    display: flex;
+    margin-top: 3%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 1%;
+}
+.articlePersonagens:hover{
+    background-color: rgb(197, 197, 97);
+}
+.textoPersonagens{
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.divImagens{
+    margin-left: 2%;
+    border: 1px solid black;
+    padding: 1%;
+    border-radius: 10px;
+}
+footer{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(197, 197, 97);
+    padding: 2%;
+    font-size: 15px;
+}
+.creditos{
+    margin-left: 2%;
+}

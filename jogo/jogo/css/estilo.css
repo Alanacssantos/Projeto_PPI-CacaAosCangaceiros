@@ -1,6 +1,6 @@
 @font-face {
     font-family: "fonteJogo";
-    src: url("fontes/pixelFont.ttf");
+    src: url("../fontes/pixelFont.ttf");
 }
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -25,12 +25,12 @@ h1 {
     width: 100%;
     padding-top: 56.25%; /* Ajusta a o conteúdo sendo 56.25% da largura*/
     background-size: contain; /* Ajusta a imagem ao tamanho da div*/
-    background-image: url(images/CUTSCENES.png);
+    background-image: url(../images/CUTSCENES.png);
     background-repeat: no-repeat;
     position: relative;
 }
 #telaGame:hover{
-    cursor: url(images/Ponteiro.cur), pointer;
+    cursor: url(../images/Ponteiro.cur), pointer;
 }
 
 #placar {
@@ -61,11 +61,45 @@ span {
     top: 0%;
     left: 0%;
     position: absolute;
-    width: 12%;
-    height: 27%;
+    width: 10%;
+    height: 25%;
     /* Trabalhando com porcentagem para ficar responsivo*/
 }
 
 #telaGameOver h1 {
     font-size: 4em;
+}
+#caixaTitulo{
+    text-align: left;
+    background-color: aliceblue;
+    padding: 1%;
+    display: flex;
+}
+#titulo{
+    margin-left: 2%;
+    margin-top: 3%;
+    font-size: 25px;
+}
+.conteudoNav{
+    margin-left: 10%;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+#logo{
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 0.1%;
+}
+footer{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(197, 197, 97);
+    padding: 2%;
+    font-size: 15px;
+}
+.creditos{
+    margin-left: 2%;
 }

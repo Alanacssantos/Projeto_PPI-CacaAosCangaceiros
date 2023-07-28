@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de atirar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <script src="script.js" defer></script> 
 </head>
 <body>
-    <header>
+    <header id="caixaTitulo">
+        <img src="images/Ponteiro.png" width="100px" height="100px" id="logo">
+        <span id="titulo">Caça aos cangaceiros</span>
+        <a href="index.html" class="btn conteudoNav">Jogo</a>
+        <a href="prejogo.html" class="btn conteudoNav">Enredo do jogo</a>
+    </header>
+    <nav>
         <h1>Caça aos cangaceiros</h1>
         <h5>Atire para ganhar pontos:</h5>
         <h4>Tempo:</h4>
@@ -28,7 +34,7 @@
                 <span id="jogadas">0</span>
             </div>
         </div>
-    </header>
+    </nav>
     <div id="container">
         <div id="canvas">
             <div id="telaGame">
@@ -36,6 +42,34 @@
             </div>
         </div> 
     </div>
+
+
+
+    <footer>
+        <div class="creditos">
+            <strong>Atividade de tiro ao alvo</strong>
+            <p>Disciplina: Programação para internet <br>
+                Professor: Marcelo Figueiredo Barbosa Júnior <br>
+                IFRN - Campus Santa Cruz - RN
+            </p>
+        </div>
+        <div class="creditos">
+            <p>Todos direitos reservado à <strong>JuvaLana - Entreteniments</strong></p>
+        </div>
+        <div class="creditos">
+            <strong>Desenvolvido por:</strong>
+            <div class="nomes">
+                <img src="images/PontoDaLista.png" width="15px" height="15px" alt="">
+                Alana Costa Soares Santos
+            </div>
+            <div class="nomes">
+                <img src="images/PontoDaLista.png" width="15px" height="15px" alt="">
+                Juvam Rodrigues do Nascimento Neto
+            </div>
+
+        </div>
+    </footer>
+    
 </body>
 
 </html>

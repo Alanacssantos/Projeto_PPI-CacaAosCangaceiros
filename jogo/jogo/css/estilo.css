@@ -38,6 +38,9 @@ h1 {
     justify-content: center;
 }
 
+#vida {
+    position: absolute;
+}
 #placar div {
     margin: 1%;
     padding: 10px;

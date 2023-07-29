@@ -4,6 +4,7 @@ let telaVida = document.getElementById("vidas");
 let placaAcertos = document.getElementById("acertos");
 let placaErros = document.getElementById("erros");
 let placaJogadas = document.getElementById("jogadas");
+let dicas = document.getElementById("dicas");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
@@ -29,7 +30,6 @@ setInterval(()=>{
             vidas += 1;
             acertoVid = 0;
             ganhouVida();
-
         }
     } else {
         alvo.onclick = function() {

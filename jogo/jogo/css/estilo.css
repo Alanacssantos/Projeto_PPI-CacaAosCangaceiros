@@ -78,13 +78,24 @@ span {
 }
 #caixaTitulo{
     text-align: left;
-    background-color: aliceblue;
+    background-color:  #EDD14C;
     padding: 1%;
     display: flex;
 }
 .conteudoNav{
     margin-left: 10%;
     border: 1px solid black;
+    text-decoration: none;
+    color: #EDD14C;
+    font-size: 20px;
+    padding: 1%;
+    border-radius: 12px;
+    background-color: white;
+    
+}
+.conteudoNav:hover{
+    background-color: #A35105;
+    color: white;
 }
 #logo{
     background-color: white;
@@ -96,8 +107,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(197, 197, 97);
-    padding: 2%;
+    background-color:  #EDD14C;
     font-size: 15px;
 }
 .creditos{

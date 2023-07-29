@@ -49,6 +49,7 @@ setInterval(()=>{
     }
     if (vidas <= 0) {
         gameOver = true;
+        dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
     }
 }, 1000);
 

@@ -7,7 +7,6 @@ let placaJogadas = document.getElementById("jogadas");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
-
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;
 let larguraTela = document.getElementById("telaGame").clientWidth;
@@ -64,10 +63,19 @@ telaGame.onclick = () => {
             jogadas += 1;
             placaAcertos.innerHTML = acertos;
             placaJogadas.innerHTML = jogadas;
+            
+            var intervalo = setInterval(function(){
+                alvo.setAttribute("src", "images/alvoMorto.png");
+            }, 1000);
+            
+            //Depois de 2 segundo entra nessa função que para o intervalo e atribui a imagem normal do alvo.
+            setTimeout(function(){
+                clearInterval(intervalo);
+                alvo.setAttribute("src", "images/alvo.png");
+            }, 2000);
         }
     }
 }
-
 function ganhouVida () {
     let painelGanhou = document.createElement("h3");
     painelGanhou.innerHTML = "Você ganhou vida";

@@ -45,6 +45,8 @@
 }
 .articlePersonagens:hover{
     background-color: rgb(197, 197, 97);
+    box-shadow: 0px 2px 5px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+
 }
 .textoPersonagens{
     margin-top: 2%;

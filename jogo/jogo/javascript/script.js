@@ -8,6 +8,7 @@ let dicas = document.getElementById("dicas");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
+
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;
 let larguraTela = document.getElementById("telaGame").clientWidth;
@@ -29,7 +30,17 @@ setInterval(()=>{
         if (acertoVid == 5) {
             vidas += 1;
             acertoVid = 0;
-            ganhouVida();
+            var intervalo = setInterval(function(){
+                dicas.innerHTML = "Vida extra ganha!";
+
+            }, 600);
+            
+            //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
+            setTimeout(function(){
+                clearInterval(intervalo);
+                dicas.innerHTML = "";
+            }, 2400);
+
         }
     } else {
         alvo.onclick = function() {
@@ -39,7 +50,7 @@ setInterval(()=>{
     if (vidas <= 0) {
         gameOver = true;
     }
-}, 1250);
+}, 1000);
 
 alvo.onmousedown = () => {
     estaClicado = true;
@@ -76,12 +87,4 @@ telaGame.onclick = () => {
         }
     }
 }
-function ganhouVida () {
-    let painelGanhou = document.createElement("h3");
-    painelGanhou.innerHTML = "Você ganhou vida";
-    painelGanhou.setAttribute("id", "painelGanhou");
-    painelGanhou.setAttribute("style", "position='absolute' left='0%' top='0%'");
-    telaGame.appendChild(painelGanhou);
 
-    setInterval(function () { telaGame.removeChild(painelGanhou)}, 1000);
-}

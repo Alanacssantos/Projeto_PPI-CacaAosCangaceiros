@@ -91,11 +91,15 @@ span {
     padding: 1%;
     border-radius: 12px;
     background-color: white;
+    font-family: fonteTitulo;
+
     
 }
 .conteudoNav:hover{
     background-color: #A35105;
     color: white;
+    font-family: fonteTitulo;
+
 }
 #logo{
     background-color: white;
@@ -103,12 +107,13 @@ span {
     margin-left: 1%;
 }
 footer{
-    margin-top: 10%;
+    margin-top: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color:  #EDD14C;
     font-size: 15px;
+    padding: 2%;
 }
 .creditos{
     margin-left: 2%;
@@ -119,8 +124,11 @@ nav{
 }
 
 #cabecalho h3{
-    margin-top: 1%;
+    margin-top: 2%;
     font-family: fonteTitulo;
+    margin-bottom: 1%;
+    color: #A35105;
+    font-size: 40px;
 }
 #divVida{
     align-items: center;
@@ -128,4 +136,17 @@ nav{
 }
 header{
     align-items: center;
+}
+#dicas{
+    margin-top: 2%;
+    font-family: fonteTitulo;
+    background-color: #A35105;
+    padding: 1%; 
+    color: white;
+    border-radius: 12px; 
+    font-size: 20px; 
+}
+#divDicas{
+    display: flex;
+    justify-content: center;
 }

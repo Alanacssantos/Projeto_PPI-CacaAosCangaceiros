@@ -28,11 +28,15 @@
     padding: 1%;
     border-radius: 12px;
     background-color: white;
+    font-family: fonteTitulo;
+
     
 }
 .conteudoNav:hover{
     background-color: #A35105;
     color: white;
+    font-family: fonteTitulo;
+
 }
 #logo{
     background-color: white;
@@ -41,6 +45,10 @@
 #enredo{
     text-align: center;
     margin-top: 2%;
+}
+#enredo h1{
+    font-family: fonteTitulo;
+
 }
 .articlePersonagens{
     display: flex;
@@ -76,6 +84,8 @@ footer{
     padding: 2%;
     font-size: 15px;
     text-align: center;
+    padding: 2%;
+
 }
 .creditos{
     margin-left: 2%;

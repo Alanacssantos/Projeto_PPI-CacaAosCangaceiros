@@ -39,7 +39,7 @@ setInterval(()=>{
     if (vidas <= 0) {
         gameOver = true;
     }
-}, 1000);
+}, 1250);
 
 alvo.onmousedown = () => {
     estaClicado = true;
@@ -66,13 +66,13 @@ telaGame.onclick = () => {
             
             var intervalo = setInterval(function(){
                 alvo.setAttribute("src", "images/alvoMorto.png");
-            }, 1000);
+            }, 600);
             
-            //Depois de 2 segundo entra nessa função que para o intervalo e atribui a imagem normal do alvo.
+            //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
             setTimeout(function(){
                 clearInterval(intervalo);
                 alvo.setAttribute("src", "images/alvo.png");
-            }, 2000);
+            }, 1200);
         }
     }
 }

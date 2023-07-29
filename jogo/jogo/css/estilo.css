@@ -2,6 +2,10 @@
     font-family: "fonteJogo";
     src: url("../fontes/pixelFont.ttf");
 }
+@font-face {
+    font-family: "fonteTitulo";
+    src: url("../fontes/VCR_OSD_MONO_1.001.ttf");
+}
 * {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -38,8 +42,8 @@ h1 {
     justify-content: center;
 }
 
-#vida {
-    position: absolute;
+#vidas {
+    margin-left: 12%;
 }
 #placar div {
     margin: 1%;
@@ -78,21 +82,14 @@ span {
     padding: 1%;
     display: flex;
 }
-#titulo{
-    margin-left: 2%;
-    margin-top: 3%;
-    font-size: 25px;
-}
 .conteudoNav{
     margin-left: 10%;
-    margin-top: 3%;
     border: 1px solid black;
 }
 #logo{
     background-color: white;
-    border-radius: 50%;
     border: 2px solid black;
-    padding: 0.1%;
+    margin-left: 1%;
 }
 footer{
     margin-top: 10%;
@@ -105,4 +102,20 @@ footer{
 }
 .creditos{
     margin-left: 2%;
+}
+nav{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+#cabecalho h3{
+    margin-top: 1%;
+    font-family: fonteTitulo;
+}
+#divVida{
+    align-items: center;
+    justify-content: left;
+}
+header{
+    align-items: center;
 }

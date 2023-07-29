@@ -6,37 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de atirar</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="script.js" defer></script> 
-</head>
+    <script src="javascript/script.js" defer></script> 
+    <link rel="shortcut icon" href="images/Ponteiro.png" type="image/x-icon" /></head>
 <body>
     <header id="caixaTitulo">
-        <img src="images/Ponteiro.png" width="100px" height="100px" id="logo">
-        <span id="titulo">Caça aos cangaceiros</span>
+        <img src="images/Caça aos cangaceiros.png" width="300px" height="150px" id="logo">
         <a href="index.html" class="btn conteudoNav">Jogo</a>
         <a href="prejogo.html" class="btn conteudoNav">Enredo do jogo</a>
     </header>
+
     <nav>
-        <h1>Caça aos cangaceiros</h1>
-        <h5>Atire para ganhar pontos:</h5>
+        <div id="cabecalho">
+            <h3>Atire para ganhar pontos:</h3>
+        </div>
+
         <div id="placar">
             <div>
-                <h3>Erros</h3>
+                <h3>Erros:  </h3>
                 <span id="erros">0</span>
             </div>
             <div>
-                <h3>Acertos</h3>
+                <h3>Acertos:  </h3>
                 <span id="acertos">0</span>
             </div>
             <div>
-                <h3>Tentativas</h3>
+                <h3>Tentativas:  </h3>
                 <span id="jogadas">0</span>
             </div>
-            <div>
-                <img width="25px" height="25px" src="images/vida.png">
+            <div id="divVida">
+                <img width="30px" height="30px" src="images/vida.png">
                 <span id="vidas">0</span>
             </div>
         </div>
     </nav>
+
     <div id="container">
         <div id="canvas">
             <div id="telaGame">

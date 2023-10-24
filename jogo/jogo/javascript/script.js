@@ -1,13 +1,20 @@
 let alvo = document.getElementById("alvo");
 let telaGame = document.getElementById("telaGame");
 let telaVida = document.getElementById("vidas");
+let modal = document.querySelector("dialog");
 let placaAcertos = document.getElementById("acertos");
 let placaErros = document.getElementById("erros");
 let placaJogadas = document.getElementById("jogadas");
 let dicas = document.getElementById("dicas");
+let botaoEnvio = document.getElementById("botaoEnvio");
 let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
+let mostrou = false;
+
+//Pegando o nome da pessoa
+let inputNome = document.getElementById("nome");
+
 
 //Pegando o Height e Widht
 let alturaTela = document.getElementById("telaGame").clientHeight;
@@ -50,6 +57,11 @@ setInterval(()=>{
     if (vidas <= 0) {
         gameOver = true;
         dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
+        
+        if(!mostrou){
+            modal.showModal();
+        }
+        mostrou = true;
     }
 }, 1000);
 
@@ -87,5 +99,46 @@ telaGame.onclick = () => {
             }, 1200);
         }
     }
+}
+function startTempo(duracao, telaDeTempo){
+    var tempo = duracao, minutos, segundos;
+
+    var intervaloTempoJogo = setInterval(function(){
+        minutos = parseInt(tempo/60, 10); //convertendo minutos em segundos
+        segundos = parseInt(tempo%60, 10); //convertendo minutos em 
+        
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        telaDeTempo.textContent = minutos + ":" + segundos;
+
+        if(--tempo < 0){
+            gameOver = true;
+            tempo = 0;
+            dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
+            
+            if(!mostrou){
+                modal.showModal();
+            }
+            mostrou = true;
+        }
+        if(vidas <= 0){
+            pararTempo();
+        }
+
+    }, 1000);
+
+    function pararTempo(){
+        clearInterval(intervaloTempoJogo);
+    }
+}
+window.onload = function(){
+    var duracao = 10 * 1; //Conversão de tempo para segundos
+    var telaDeTempo =  document.querySelector("#telaTempo");
+    startTempo(duracao, telaDeTempo);
+}
+botaoEnvio.onclick = function(){
+    var nome = inputNome.value
+    document.location.href="../bancoDeDados/arquivo.php?nome="+nome+"&erros="+erros + "&acertos" + acertos; 
 }
 

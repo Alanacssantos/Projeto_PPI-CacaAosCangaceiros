@@ -22,23 +22,34 @@
 
         <div id="placar">
             <div>
-                <h3>Erros:  </h3>
-                <span id="erros">0</span>
+                <h3 class="placarTxt">Erros:  </h3>
+                <span id="erros" class="placarTxt">0</span>
             </div>
             <div>
-                <h3>Acertos:  </h3>
-                <span id="acertos">0</span>
+                <h3 class="placarTxt">Acertos:  </h3>
+                <span id="acertos" class="placarTxt">0</span>
+            </div>
+            <div id="telaTempo">
+                
             </div>
             <div>
-                <h3>Tentativas:  </h3>
-                <span id="jogadas">0</span>
+                <h3 class="placarTxt">Tentativas:  </h3>
+                <span id="jogadas" class="placarTxt">0</span>
             </div>
             <div id="divVida">
                 <img width="30px" height="30px" src="images/vida.png">
-                <span id="vidas">0</span>
+                <span id="vidas" class="placarTxt">0</span>
             </div>
         </div>
     </nav>
+
+    <dialog>
+        <form action="" method="get">
+            <label for="nome">Nome do(a) jogador(a):</label>
+            <input type="text" id="nome" name="nome">
+            <input type="submit" id="botaoEnvio">
+        </form>
+    </dialog>    
 
     <div id="container">
         <div id="canvas">

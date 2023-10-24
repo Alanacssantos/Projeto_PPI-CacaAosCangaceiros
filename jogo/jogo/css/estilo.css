@@ -151,3 +151,6 @@ header{
     display: flex;
     justify-content: center;
 }
+.placarTxt{
+    font-size: 1.2vw;
+}

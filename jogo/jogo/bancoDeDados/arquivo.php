@@ -9,8 +9,4 @@ if ($nome || $sobrenome) {
     echo "Meu nome é: ".$nome;
     echo "<br/></br>";
     echo "Meu sobrenome é: ".$sobrenome;
-} 
-
-
-
-?>
+}

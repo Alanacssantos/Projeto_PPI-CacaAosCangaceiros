@@ -24,41 +24,41 @@ let alturaAlvo = document.getElementById("alvo").clientHeight;
 let larguraAlvo = document.getElementById("alvo").clientWidth;
 
 
-setInterval(()=>{
+setInterval(() => {
     if (!gameOver) {
         alvo.style.top = Math.floor(Math.random() * (alturaTela - alturaAlvo)) + "px";
         alvo.style.left = Math.floor(Math.random() * (larguraTela - larguraAlvo)) + "px";
         alvo.style.display = "block";
-    
-        alvo.onclick = function() {
+
+        alvo.onclick = function () {
             alvo.style.display = "none";
         };
         telaVida.innerHTML = vidas;
         if (acertoVid == 5) {
             vidas += 1;
             acertoVid = 0;
-            var intervalo = setInterval(function(){
+            var intervalo = setInterval(function () {
                 dicas.innerHTML = "Vida extra ganha!";
 
             }, 600);
-            
+
             //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
-            setTimeout(function(){
+            setTimeout(function () {
                 clearInterval(intervalo);
                 dicas.innerHTML = "";
             }, 2400);
 
         }
     } else {
-        alvo.onclick = function() {
+        alvo.onclick = function () {
             alvo.style.display = "block";
         };
     }
     if (vidas <= 0) {
         gameOver = true;
         dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
-        
-        if(!mostrou){
+
+        if (!mostrou) {
             modal.showModal();
         }
         mostrou = true;
@@ -87,58 +87,58 @@ telaGame.onclick = () => {
             jogadas += 1;
             placaAcertos.innerHTML = acertos;
             placaJogadas.innerHTML = jogadas;
-            
-            var intervalo = setInterval(function(){
+
+            var intervalo = setInterval(function () {
                 alvo.setAttribute("src", "images/alvoMorto.png");
             }, 600);
-            
+
             //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
-            setTimeout(function(){
+            setTimeout(function () {
                 clearInterval(intervalo);
                 alvo.setAttribute("src", "images/alvo.png");
             }, 1200);
         }
     }
 }
-function startTempo(duracao, telaDeTempo){
+function startTempo(duracao, telaDeTempo) {
     var tempo = duracao, minutos, segundos;
 
-    var intervaloTempoJogo = setInterval(function(){
-        minutos = parseInt(tempo/60, 10); //convertendo minutos em segundos
-        segundos = parseInt(tempo%60, 10); //convertendo minutos em 
-        
+    var intervaloTempoJogo = setInterval(function () {
+        minutos = parseInt(tempo / 60, 10); //convertendo minutos em segundos
+        segundos = parseInt(tempo % 60, 10); //convertendo minutos em 
+
         minutos = minutos < 10 ? "0" + minutos : minutos;
         segundos = segundos < 10 ? "0" + segundos : segundos;
 
         telaDeTempo.textContent = minutos + ":" + segundos;
 
-        if(--tempo < 0){
+        if (--tempo < 0) {
             gameOver = true;
             tempo = 0;
             dicas.innerHTML = "Você perdeu! Clique em jogo para começar novamente!";
-            
-            if(!mostrou){
+
+            if (!mostrou) {
                 modal.showModal();
             }
             mostrou = true;
         }
-        if(vidas <= 0){
+        if (vidas <= 0) {
             pararTempo();
         }
 
     }, 1000);
 
-    function pararTempo(){
+    function pararTempo() {
         clearInterval(intervaloTempoJogo);
     }
 }
-window.onload = function(){
+window.onload = function () {
     var duracao = 10 * 1; //Conversão de tempo para segundos
-    var telaDeTempo =  document.querySelector("#telaTempo");
+    var telaDeTempo = document.querySelector("#telaTempo");
     startTempo(duracao, telaDeTempo);
 }
-botaoEnvio.onclick = function(){
+botaoEnvio.onclick = function () {
     var nome = inputNome.value
-    document.location.href="../bancoDeDados/arquivo.php?nome="+nome+"&erros="+erros + "&acertos" + acertos; 
+    document.location.href = "../bancoDeDados/arquivo.php?nome=" + nome + "&erros=" + erros + "&acertos" + acertos;
 }
 

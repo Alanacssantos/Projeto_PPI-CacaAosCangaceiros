@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de atirar</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="javascript/script.js" defer></script> 
-    <link rel="shortcut icon" href="images/Ponteiro.png" type="image/x-icon" /></head>
+    <script src="javascript/script.js" defer></script>
+    <link rel="shortcut icon" href="images/Ponteiro.png" type="image/x-icon" />
+</head>
+
 <body>
     <header id="caixaTitulo">
         <img src="images/Caça aos cangaceiros.png" width="300px" height="150px" id="logo">
@@ -22,18 +25,18 @@
 
         <div id="placar">
             <div>
-                <h3 class="placarTxt">Erros:  </h3>
+                <h3 class="placarTxt">Erros: </h3>
                 <span id="erros" class="placarTxt">0</span>
             </div>
             <div>
-                <h3 class="placarTxt">Acertos:  </h3>
+                <h3 class="placarTxt">Acertos: </h3>
                 <span id="acertos" class="placarTxt">0</span>
             </div>
             <div id="telaTempo">
-                
+
             </div>
             <div>
-                <h3 class="placarTxt">Tentativas:  </h3>
+                <h3 class="placarTxt">Tentativas: </h3>
                 <span id="jogadas" class="placarTxt">0</span>
             </div>
             <div id="divVida">
@@ -49,7 +52,7 @@
             <input type="text" id="nome" name="nome">
             <input type="submit" id="botaoEnvio">
         </form>
-    </dialog>    
+    </dialog>
 
     <div id="container">
         <div id="canvas">
@@ -59,7 +62,7 @@
             <div id="divDicas">
                 <h3 id="dicas"></h3>
             </div>
-        </div> 
+        </div>
     </div>
 
     <footer>
@@ -86,7 +89,7 @@
 
         </div>
     </footer>
-    
+
 </body>
 
 </html>

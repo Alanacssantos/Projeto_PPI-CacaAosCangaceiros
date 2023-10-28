@@ -139,6 +139,6 @@ window.onload = function () {
 }
 botaoEnvio.onclick = function () {
     var nome = inputNome.value
-    document.location.href = "../bancoDeDados/arquivo.php?nome=" + nome + "&erros=" + erros + "&acertos" + acertos;
+    document.location.href = "../bancoDeDados/arquivo.php?nome=" + nome + "&erros=" + erros + "&acertos=" + acertos;
 }
 

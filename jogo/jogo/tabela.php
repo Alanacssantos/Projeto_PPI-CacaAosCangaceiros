@@ -1,3 +1,17 @@
+<?php
+// Conexão com o banco 
+$hostname = 'localhost';
+$username = 'root';
+$password = 'Juvam20041103';
+$database = 'cangaceiros_db';
+
+$pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+require_once "classes/Partida.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +21,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de atirar</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="javascript/script.js" defer></script>
     <link rel="shortcut icon" href="images/Ponteiro.png" type="image/x-icon" />
 </head>
 
@@ -19,51 +32,38 @@
         <a href="tabela.php" class="btn conteudoNav">Ranking</a>
     </header>
 
-    <nav>
-        <div id="cabecalho">
-            <h3>Atire para ganhar pontos:</h3>
-        </div>
+    <div id="divTable">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td><strong>ID:</strong></td>
+                    <td><strong>Nome:</strong></td>
+                    <td><strong>Acertos:</strong></td>
+                    <td><strong>Erros:</strong></td>
+                    <td><strong>Data atual:</strong></td>
+                    <td><strong>Tempo atual:</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                //Select
+                $partidas = new Partida();
+                $arrayPartidas = $partidas->mostrarRanking();
 
-        <div id="placar">
-            <div>
-                <h3 class="placarTxt">Erros: </h3>
-                <span id="erros" class="placarTxt">0</span>
-            </div>
-            <div>
-                <h3 class="placarTxt">Acertos: </h3>
-                <span id="acertos" class="placarTxt">0</span>
-            </div>
-            <div id="telaTempo">
+                foreach ($arrayPartidas as $p) :
+                ?>
+                    <tr>
+                        <td><?= $p->getId() ?></td>
+                        <td><?= $p->getNome() ?></td>
+                        <td><?= $p->getAcertos() ?></td>
+                        <td><?= $p->getErros() ?></td>
+                        <td><?= $p->getDataAtual() ?></td>
+                        <td><?= $p->getTempoAtual() ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
 
-            </div>
-            <div>
-                <h3 class="placarTxt">Tentativas: </h3>
-                <span id="jogadas" class="placarTxt">0</span>
-            </div>
-            <div id="divVida">
-                <img width="30px" height="30px" src="images/vida.png">
-                <span id="vidas" class="placarTxt">0</span>
-            </div>
-        </div>
-    </nav>
-
-    <dialog>
-        <form action="" method="get">
-            <label for="nome">Nome do(a) jogador(a):</label>
-            <input type="text" id="nome" name="nome" required><br>
-            <a href="#" id="botaoEnvio">Enviar</a>
-        </form>
-    </dialog>
-
-    <div id="container">
-        <div id="canvas">
-            <div id="telaGame">
-                <img id="alvo" width="72px" height="102px" src="images/alvo.png">
-            </div>
-            <div id="divDicas">
-                <h3 id="dicas"></h3>
-            </div>
-        </div>
     </div>
 
     <footer>

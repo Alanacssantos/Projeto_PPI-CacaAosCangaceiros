@@ -2,6 +2,7 @@
     font-family: "fonteTitulo";
     src: url("../fontes/VCR_OSD_MONO_1.001.ttf");
 }
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -12,24 +13,29 @@
 h1 {
     font-family: fonteJogo;
 }
-#container{
+
+#container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#canvas{
+
+#canvas {
     width: 65%;
 }
 
 #telaGame {
     width: 100%;
-    padding-top: 56.25%; /* Ajusta a o conteúdo sendo 56.25% da largura*/
-    background-size: contain; /* Ajusta a imagem ao tamanho da div*/
+    padding-top: 56.25%;
+    /* Ajusta a o conteúdo sendo 56.25% da largura*/
+    background-size: contain;
+    /* Ajusta a imagem ao tamanho da div*/
     background-image: url(../images/CUTSCENES.png);
     background-repeat: no-repeat;
     position: relative;
 }
-#telaGame:hover{
+
+#telaGame:hover {
     cursor: url(../images/Ponteiro.cur), pointer;
 }
 
@@ -41,6 +47,7 @@ h1 {
 #vidas {
     margin-left: 12%;
 }
+
 #placar div {
     margin: 1%;
     padding: 1%;
@@ -56,6 +63,7 @@ h1 {
     padding: 0%;
     margin-right: 2%;
 }
+
 span {
     padding-top: 3px;
 }
@@ -72,13 +80,15 @@ span {
 #telaGameOver h1 {
     font-size: 4em;
 }
-#caixaTitulo{
+
+#caixaTitulo {
     text-align: left;
-    background-color:  #EDD14C;
+    background-color: #EDD14C;
     padding: 1%;
     display: flex;
 }
-.conteudoNav{
+
+.conteudoNav {
     margin-left: 10%;
     border: 1px solid black;
     text-decoration: none;
@@ -88,22 +98,27 @@ span {
     border-radius: 12px;
     background-color: white;
     font-family: fonteTitulo;
-    text-shadow: 0px 1px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
 
 }
-.conteudoNav:hover{
+
+.conteudoNav:hover {
     background-color: #A35105;
     color: white;
     font-family: fonteTitulo;
-    text-shadow: 0px 2px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
 
 }
-#logo{
+
+#logo {
     background-color: white;
     border: 2px solid black;
     margin-left: 1%;
 }
-footer{
+
+footer {
     margin-top: 8%;
     display: flex;
     align-items: center;
@@ -112,45 +127,123 @@ footer{
     font-size: 15px;
     padding: 2%;
 }
-.creditos{
+
+.creditos {
     margin-left: 2%;
 }
-nav{
+
+nav {
     margin-top: 2%;
     margin-bottom: 1%;
 }
 
-#cabecalho h3{
+#cabecalho h3 {
     margin-top: 2%;
     font-family: fonteTitulo;
     margin-bottom: 1%;
     color: #A35105;
     font-size: 40px;
-    text-shadow: 0px 2px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
 
 }
-#divVida{
+
+#divVida {
     align-items: center;
     justify-content: left;
     background-color: #EDD14C;
 }
-header{
+
+header {
     align-items: center;
 }
-#dicas{
+
+#dicas {
     margin-top: 2%;
     font-family: fonteTitulo;
     background-color: #A35105;
     padding: 1%;
-    text-shadow: 0px 2px 0px rgb(0, 0, 0); /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    /*deslocar no eixo x, deslocar no eixo y, valor do borramento da sombra, cor da sombra*/
     color: white;
-    border-radius: 12px; 
-    font-size: 20px; 
+    border-radius: 12px;
+    font-size: 20px;
 }
-#divDicas{
+
+#divDicas {
     display: flex;
     justify-content: center;
 }
-.placarTxt{
+
+.placarTxt {
     font-size: 1.2vw;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    /*define a separação entre as bordar*/
+    padding: 2vw;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}
+
+#divTable {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+dialog {
+    margin: auto;
+    padding: 5vw;
+    border-radius: 10px;
+}
+
+dialog>form>input {
+    margin-bottom: 10%;
+    padding: 2%;
+    border: gray solid 2px;
+    border-radius: 6px;
+}
+
+dialog>form>label {
+    margin-bottom: 10%;
+}
+
+dialog>form>a {
+    background-color: #007bff;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    text-decoration: none;
+    /* Remova a formatação de link padrão */
+    border-radius: 5px;
+    border: black solid 1px;
+    /* Cantos arredondados */
+    padding: 2%;
+
+}
+dialog>form>a:hover {
+    background-color: #0abe40;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    text-decoration: none;
+    /* Remova a formatação de link padrão */
+    border-radius: 5px;
+    border: black solid 1px;
+    /* Cantos arredondados */
+    padding: 2%;
+
+}
+table tr:nth-child(-n+3) {
+    background-color: #ffcc00; /* Define a cor de fundo desejada */
+}
+table thead tr td{
+    background-color: #EDD14C;
 }

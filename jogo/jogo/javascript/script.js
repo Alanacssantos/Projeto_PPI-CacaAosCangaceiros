@@ -11,6 +11,7 @@ let acertos = 0, erros = 0, jogadas = 0, vidas = 3, acertoVid = 0;
 let estaClicado = false;
 let gameOver = false;
 let mostrou = false;
+let audioTiro = new Audio("../sons/SomDeTiro.mp3");
 
 //Pegando o nome da pessoa
 let inputNome = document.getElementById("nome");
@@ -42,7 +43,7 @@ setInterval(() => {
 
             }, 600);
 
-            //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
+            //Depois de 4 segundos desapaerece
             setTimeout(function () {
                 clearInterval(intervalo);
                 dicas.innerHTML = "";
@@ -92,12 +93,13 @@ telaGame.onclick = () => {
                 alvo.setAttribute("src", "images/alvoMorto.png");
             }, 600);
 
-            //Depois de 1.2 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
+            //Depois de 1 segundo, para o intervalo e atribui a imagem normal novamente ao alvo.
             setTimeout(function () {
                 clearInterval(intervalo);
                 alvo.setAttribute("src", "images/alvo.png");
-            }, 1200);
+            }, 1000);
         }
+        audioTiro.play();
     }
 }
 function startTempo(duracao, telaDeTempo) {
@@ -133,7 +135,7 @@ function startTempo(duracao, telaDeTempo) {
     }
 }
 window.onload = function () {
-    var duracao = 10 * 1; //Conversão de tempo para segundos
+    var duracao = 90 * 1; //Conversão de tempo para segundos
     var telaDeTempo = document.querySelector("#telaTempo");
     startTempo(duracao, telaDeTempo);
 }
